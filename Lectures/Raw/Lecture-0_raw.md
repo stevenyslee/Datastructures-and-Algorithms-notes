@@ -6,7 +6,7 @@ ___
 
 An algorithm is a series of actions such that they yield a result or an effect.
 
-## What defines a good algorithm?
+## What defines a good algorithm ?
 
 First and foremost, for an algorithm to be good, it first has to complete some criteria, ex:
 
