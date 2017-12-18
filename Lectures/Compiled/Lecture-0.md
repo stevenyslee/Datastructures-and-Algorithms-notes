@@ -32,7 +32,7 @@ ___
   
   
   
-__Example as to why understainding the dataset is more important than code:__
+__Example as to why understanding the dataset is more important than code:__
   
 Suppose you have 1 million numbers where: <p align="center"><img src="https://latex.codecogs.com/gif.latex?x&#x5C;epsilon[0,100]"/></p>  
   
