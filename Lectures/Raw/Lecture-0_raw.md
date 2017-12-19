@@ -29,7 +29,7 @@ ___
 
 
 
-__Example as to why understainding the dataset is more important than code:__
+__Example as to why understanding the dataset is more important than code:__
 
 Suppose you have 1 million numbers where: $$x\epsilon[0,100]$$ 
 _(This means the minimum value of x is 0 and the maximum is 100)_
