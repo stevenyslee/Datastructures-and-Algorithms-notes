@@ -163,10 +163,11 @@ The above algorithm is in the order of <img src="https://latex.codecogs.com/gif.
 ### Data permutations and worst case scenario
   
   
-Let <img src="https://latex.codecogs.com/gif.latex?D_n"/> the possible combinations of all elements, <img src="https://latex.codecogs.com/gif.latex?t(I)"/> the number of basic operations for every <img src="https://latex.codecogs.com/gif.latex?i%20&#x5C;in%20D_n"/>. Thus the runtime of worse case is equal  to <img src="https://latex.codecogs.com/gif.latex?max%20&#x5C;(%20t(I)%20|%20I%20&#x5C;in%20D_n&#x5C;)"/>.
+Let <img src="https://latex.codecogs.com/gif.latex?D_n"/> the possible combinations of all elements, <img src="https://latex.codecogs.com/gif.latex?t(I)"/> the number of basic operations for every <img src="https://latex.codecogs.com/gif.latex?i%20&#x5C;in%20D_n"/>. Thus the runtime of worse case is equal  to <img src="https://latex.codecogs.com/gif.latex?max%20&#x5C;{%20t(I)%20|%20I%20&#x5C;in%20D_n&#x5C;}"/>.
   
 When we evaluate an algorithm for it's worst case performance, we also have to consider the possible permutations of the data.
   
-For example, when an array is sorted, bubblesort runs in <img src="https://latex.codecogs.com/gif.latex?O(n)"/>, when it's sorted in __reverse__, it runs in <img src="https://latex.codecogs.com/gif.latex?O(n^2)"/>. Because we only consider the worst case, we see that time complexity of bubble sort is equal to <p align="center"><img src="https://latex.codecogs.com/gif.latex?max&#x5C;{t_{sorted},t_{reverse}&#x5C;}=%20t_{reverse}%20=%20O(n^2)"/></p>  
+For example, when an array is sorted, bubblesort runs in <img src="https://latex.codecogs.com/gif.latex?O(n)"/>, when it's sorted in __reverse__, it runs in <img src="https://latex.codecogs.com/gif.latex?O(n^2)"/>. Because we only consider the worst case, we see that time complexity of bubble sort is equal to
+<p align="center"><img src="https://latex.codecogs.com/gif.latex?max(t_{sorted},t_{reverse})=%20t_{reverse}%20=%20O(n^2)"/></p>  
   
   

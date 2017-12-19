@@ -86,12 +86,12 @@ Two common list types are:
 A stack has the following set of operations.
 |Operation|Description|
 |-|-|
-|makeEmpty()| Create an empty stack
-|isEmpty() | Return ```True``` if the stack is empty otherwise, ```False```
-|push(x) | Add X to the top of the stack
-|pop() | Remove the element at the top of the stack and return it.
-|top() | Peek the element at the top of the stack
-|size()| Return how many elements are in the stack.
+|makeEmpty()| Create an empty stack|
+|isEmpty() | Return ```True``` if the stack is empty otherwise, ```False```|
+|push(x) | Add X to the top of the stack|
+|pop() | Remove the element at the top of the stack and return it|
+|top() | Peek the element at the top of the stack|
+|size()| Return how many elements are in the stack|
   
 Stack operations are bound by the following rules:
   
@@ -106,8 +106,9 @@ Stack operations are bound by the following rules:
   
 ##### Stack In Python
   
+  
 ```Python
-class Stack:
+class stack:
   
     def __init__(self): #makeEmpty
         self.elements = []
@@ -115,14 +116,19 @@ class Stack:
     def __len__(self):
         return len(self.elements)
   
-    #Boolean function, returns true if the stack is not empty.
-    #Is to be used in place of isEmpty
+    # Boolean function, returns true if the stack is not empty.
+    # Is to be used in place of isEmpty
     def __bool__(self):
         return bool(self.elements)
   
-    #Allows us to do this: stack += 1 and 1 is put at the top of the stack
-    def __iadd__(self,other):
-        self.elements.append(other)
+    # Allows us to do this: stack += x and x is put at the top of the stack
+    def __iadd__(self, element):
+        self.elements.append(element)
+        return self
+  
+    # Pushes an element at the top of the stack, same as
+    def push(self, element):
+        self.elements.append(element)
         return self
   
     #Allows us to pop n times the stack using stack -= n
@@ -134,14 +140,20 @@ class Stack:
     def __str__(self):
         return str(self.elements)
   
-    #Removes count elements from the stack 
-    #and returns them in a generator object
-    def pop(self, count = 1):
-        for element in range(count):
+    #Removes the element at the top of the stack
+    def pop(self):
+        return self.elements.pop()
+  
+    # Not a default operation of a stack but allows us to 
+    # pop the stack count times and keep the all the elements.
+    # as it returns a generator object
+    def chop(self, count=1):
+        for _ in range(count):
             yield self.elements.pop()
+  
     #Get the topmost element.
     def peek(self):
-        return self.elements[len(self)-1]
+        return self.elements[-1]
   
     #Empties itself by creating a new list.
     def make_empty(self):
@@ -150,7 +162,7 @@ class Stack:
   
 ```
   
-A simple stack implementation in Python using the builtin list ADT. Code [here](./Algorithms/Stack.py ).
+A simple stack implementation in Python using the builtin list Datastructure. Code [here](../../Code/Datastructures/Stack/Stack.py ).
   
 A stack can also be implemented using arrays. Depending on the implementation however, a stack using arrays may have <img src="https://latex.codecogs.com/gif.latex?O(n)"/> insertion and removal when the initial capacity of the array is reached and all elements will have to be migrated in a new array. 
   
@@ -227,7 +239,7 @@ class Queue:
   
 ```
   
-Code [here](./Algorithms/Queue.py ).
+Code [here](../../Code/Datastructures/Queue/Queue.py ).
   
 #### LinkedLists
   
@@ -236,9 +248,11 @@ LinkedLists use dynamic memory allocation where they use memory when a new eleme
   
 ##### Singly LinkedLists
   
+  
 In a SLL a node contains a single pointer to the next element and is unaware of the previous elements.
   
 ##### Singly LinkedList in Python
+  
   
 ```Python
 class Node:
@@ -386,7 +400,7 @@ class LinkedList:
 #### Cyclical List
   
   
-Cyclical lists are used when there are memory constraints. In cyclical lists, our list doesn't end in a[n-1] but instead continues to a[0]. There is very litle reason to write a cyclical list in Python as there are no static arrays and One can always use a linkedlist implementation to achieve practically the same result. 
+Cyclical lists are used when there are memory constraints. In cyclical lists, our list doesn't end in a[n-1] but instead continues to a[0]. There is very litle reason to write a cyclical list in Python as there are no static arrays and One can always use a linkedlist implementation to achieve practically the same result.
   
 Regardless, here is a Cyclical List implementation in Python built atop of a singly LinkedList.
   
@@ -550,4 +564,5 @@ class CyclicalList:
     def __bool__(self):
         return bool(self.root)
 ```
+File [here](../../Code/Datastructures/List/CyclicalList.py ).
   

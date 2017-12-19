@@ -149,6 +149,8 @@ Suppose a sorted array 'A' where we search for element with value 'k'. We can:
         return bs(l,x,mid,high)
  ```
 
+File is available [here](../../Code/Algorithms/Arrays/binary_search.py).
+
 Size | Operations
 |-|-|
 10|4|
