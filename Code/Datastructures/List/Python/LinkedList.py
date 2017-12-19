@@ -10,7 +10,7 @@ class Node:
     def __eq__(self, other):
         return self.element == other
 
-    # We return a pair object in order to have a referrence to the next node.
+    # We return a pair object in order to have a reference to the next node.
     def remove(self, element):
 
         if self == element:
@@ -59,7 +59,7 @@ class LinkedList:
         return res
     
     # Creates an array with all the elements in O(n), Sorts them in O(nlogn)
-    # Overwrites in O(n) -> O(nlogn) runtime.
+    # Overwrites in O(n) thus, requires O(nlogn) runtime.
     def sort(self, comp=None, key=None, reverse=False):
         elements = [x for x in self]
         current = self.root

@@ -3,7 +3,7 @@
 
 
 /** 
- * The structure of the bst allows it to trade space for reduced indivitual free and malloc calls; 
+ * The structure of the bst allows it to trade space for reduced individual free and malloc calls;
  */
 typedef struct node{
 	struct node	**children;

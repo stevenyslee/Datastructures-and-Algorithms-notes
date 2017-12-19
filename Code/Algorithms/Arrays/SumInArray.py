@@ -4,7 +4,7 @@
 #  i)    A naive approach that includes all combinations with O (n^2).
 #  ii)   A less naive approach where the array is sorted and then looked through with:
 #        O(nlogn +n) => O(nlogn) time complexity.This method can't find the index of the
-#        items,only the existance of a pair, with some modifications it's easy to find it
+#        items,only the existence of a pair, with some modifications it's easy to find it
 #  iii)  A Map approach where the array[i] is looked into a map as a key, if it exists then
 #        the pair is found, otherwise we insert 
 #        O(n) time complexity

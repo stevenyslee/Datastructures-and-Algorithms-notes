@@ -1,2 +1,14 @@
 
 Output/
+
+\.idea/
+
+venv/
+
+Lectures/Raw/\._Lecture-2_raw\.md
+
+Lectures/Raw/\._Lecture-3_raw\.md
+
+Lectures/Raw/\._Lecture-4_raw\.md
+
+Code/Datastructures/List/C/cmake-build-debug/
