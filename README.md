@@ -1,23 +1,35 @@
 # Readme
 
-___
+
 
 ## About this repo
 
 This repo consists of my notes of algorithms and datastructures classes taught in University of Cyprus.
 
-The repo contains most, if not all content as taught in the classes along with accompanied code. For educational purposes, the code is written in python and/or C. Special cases and optimisations that are either not possible in python or make little sense to implement in Python, will be implemented C. It's expected that the reader is familiar with programming, and Object Oriented Programming and pointers.
+The repo contains most, if not all content as taught in the classes along with accompanied code. For educational purposes, the code is written in python and/or C. Special cases and optimisations that are either not possible in python or make little sense to implement in Python, will be implemented C. It's expected that the reader is familiar with Object Oriented Programming and pointers.
 
-Example of this, is a double link linked list with only one (1) field for neighbouring elements.
+___
 
 ## Content
+
+### Lectures
 
 0. [Lecture 0 - What are algorithms and their importance.](./Lectures/Compiled/Lecture-0.md)
 1. [Lecture 1 - Big-O notation](./Lectures/Compiled/Lecture-1.md)
 2. [Lecture 2 - Runtime analysis Examples](./Lectures/Compiled/Lecture-2.md)
 3. [Lecture 3 - Abstract datatypes](./Lectures/Compiled/Lecture-3.md)
 
-**Note :** The content and lectures above, are only those I have completed thus far. For a complete list of the content I am working on, checkout the [roadmap](#roadmap).
+**Note :** The lectures above are only the lectures I have compiled so far. For a complete list of the Lectures I am working on, checkout the [roadmap](#roadmap).
+
+### Algorithms
+
+Check out [Algorithms.md](./Algorithms.md) for a list of all algorithms in the repository
+
+### Datastructures
+
+Check out [Datastructures.md](./Datastructures.md) for a list of all Datastructures implemented in the repository
+
+
 
 ## Note style
 
