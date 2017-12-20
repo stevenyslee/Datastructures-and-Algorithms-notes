@@ -80,7 +80,6 @@ $$max\{if_a,if_b\} = max\{\Sigma_{j\in n}1,1\} = \Sigma_{j\in n}1 = n$$
 
 $$\Sigma_{i \in n} max\{if_a,if_b\} = \Sigma_{i \in n}n = n^2$$
 
-
 ### Examples 6-7 : Recursive search for element in a sorted array
 
 Suppose a sorted array 'A' where we search for element with value 'k'. We can:
@@ -117,7 +116,7 @@ Suppose a sorted array 'A' where we search for element with value 'k'. We can:
             return l[0] == key
 
         ## If the middle element is smaller we will search in
-        ## a sublist that begins with that element and 
+        ## a sublist that begins with that element and
         ## goes towards the end
         if  l[len(l) // 2] <= key:
             return pythonic_bs(l[len(l)//2:],key)
@@ -149,7 +148,7 @@ Suppose a sorted array 'A' where we search for element with value 'k'. We can:
         return bs(l,x,mid,high)
  ```
 
-File is available [here](../../Code/Algorithms/Arrays/binary_search.py).
+File is available [here](../../Code/Algorithms/Arrays/BinarySearch.py).
 
 Size | Operations
 |-|-|
@@ -173,7 +172,7 @@ So we conclude that binary search $\in O(log_2n)$
             return l[0] == key
 
         ## If the middle element is smaller we will search in
-        ## a sublist that begins with that element and 
+        ## a sublist that begins with that element and
         ## goes towards the end
         if  l[len(l) // 2] <= key:
             return pythonic_bs(l[len(l)//2:],key)
@@ -232,4 +231,4 @@ Suppose a sorted list where we can look ahead $\sqrt{n}$ elements. If we were to
 
 $\implies O(\sqrt{n})+O(\sqrt{n}) = O(2*\sqrt{n}) = O(\sqrt{n})$
 
-This is type of list is called a skiplist and will be given more attention in a later lecture.
+This is type of list is called a skip-list and will be given more attention in a later lecture.

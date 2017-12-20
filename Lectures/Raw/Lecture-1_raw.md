@@ -23,7 +23,7 @@ Theoretical time analysis has the following benefits:
 * Hardware independent
 * Does not require implementation of the algorithm
 
-There are two ( 2 ) types of complexity analysis, time and space. They are analysed using big-O notation.
+There are two ( 2 ) types of complexity analysis, time and space. They are analyzed using big-O notation.
 
 Big-O notation allows us to define an upper, a lower and an absolute bound to the algorithm relative to the volume of elements.
 
@@ -128,7 +128,7 @@ While O defines an upper bound, it's important for our bounds to be as tight as 
 
 For example, we could say that the previous examples, are $O(n^4)$, while that may be true, it doesn't provide us with a clear representation of the algorithm.
 
-When designing or analysing an algorithm, we often focus on worst case scenario in order to find the upper bound of the algorithm.
+When designing or analyzing an algorithm, we often focus on worst case scenario in order to find the upper bound of the algorithm.
 
 ## Worst Case
 
@@ -157,5 +157,5 @@ Let $D_n$ the possible combinations of all elements, $t(I)$ the number of basic 
 
 When we evaluate an algorithm for it's worst case performance, we also have to consider the possible permutations of the data.
 
-For example, when an array is sorted, bubblesort runs in $O(n)$, when it's sorted in __reverse__, it runs in $O(n^2)$. Because we only consider the worst case, we see that time complexity of bubble sort is equal to
+For example, when an array is sorted, bubble-sort runs in $O(n)$, when it's sorted in __reverse__, it runs in $O(n^2)$. Because we only consider the worst case, we see that time complexity of bubble sort is equal to
 $$max(t_{sorted},t_{reverse})= t_{reverse} = O(n^2)$$

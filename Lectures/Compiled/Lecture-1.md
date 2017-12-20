@@ -25,7 +25,7 @@ Theoretical time analysis has the following benefits:
 * Hardware independent
 * Does not require implementation of the algorithm
   
-There are two ( 2 ) types of complexity analysis, time and space. They are analysed using big-O notation.
+There are two ( 2 ) types of complexity analysis, time and space. They are analyzed using big-O notation.
   
 Big-O notation allows us to define an upper, a lower and an absolute bound to the algorithm relative to the volume of elements.
   
@@ -136,7 +136,7 @@ While O defines an upper bound, it's important for our bounds to be as tight as 
   
 For example, we could say that the previous examples, are <img src="https://latex.codecogs.com/gif.latex?O(n^4)"/>, while that may be true, it doesn't provide us with a clear representation of the algorithm.
   
-When designing or analysing an algorithm, we often focus on worst case scenario in order to find the upper bound of the algorithm.
+When designing or analyzing an algorithm, we often focus on worst case scenario in order to find the upper bound of the algorithm.
   
 ## Worst Case
   
@@ -167,7 +167,7 @@ Let <img src="https://latex.codecogs.com/gif.latex?D_n"/> the possible combinati
   
 When we evaluate an algorithm for it's worst case performance, we also have to consider the possible permutations of the data.
   
-For example, when an array is sorted, bubblesort runs in <img src="https://latex.codecogs.com/gif.latex?O(n)"/>, when it's sorted in __reverse__, it runs in <img src="https://latex.codecogs.com/gif.latex?O(n^2)"/>. Because we only consider the worst case, we see that time complexity of bubble sort is equal to
+For example, when an array is sorted, bubble-sort runs in <img src="https://latex.codecogs.com/gif.latex?O(n)"/>, when it's sorted in __reverse__, it runs in <img src="https://latex.codecogs.com/gif.latex?O(n^2)"/>. Because we only consider the worst case, we see that time complexity of bubble sort is equal to
 <p align="center"><img src="https://latex.codecogs.com/gif.latex?max(t_{sorted},t_{reverse})=%20t_{reverse}%20=%20O(n^2)"/></p>  
   
   

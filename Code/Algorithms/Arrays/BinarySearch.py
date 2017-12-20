@@ -1,3 +1,8 @@
+import random
+
+# Nonpythonic
+
+
 def pythonic_bs(l,key):
 
     if len (l) == 1:
@@ -21,5 +26,11 @@ def bs(l, x, low, high):
 
 l = [x for x in range(100)]
 
-for x in range(-10,110):
-    print(x,x in l,bs(l,x,0,100),pythonic_bs(l,x))
+
+u = sorted(set([int(random.random() * 1000) for x in range(200)]))
+
+for x in range(-1000,1000):
+    res = x in u
+    assert res == pythonic_bs(u,x) 
+    assert res == bs(u,x,0,len(u))
+

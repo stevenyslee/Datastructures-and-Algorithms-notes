@@ -104,7 +104,6 @@ for ( i < 1; i < n; i++ )
 <p align="center"><img src="https://latex.codecogs.com/gif.latex?&#x5C;Sigma_{i%20&#x5C;in%20n}%20max&#x5C;{if_a,if_b&#x5C;}%20=%20&#x5C;Sigma_{i%20&#x5C;in%20n}n%20=%20n^2"/></p>  
   
   
-  
 ### Examples 6-7 : Recursive search for element in a sorted array
   
   
@@ -142,7 +141,7 @@ Suppose a sorted array 'A' where we search for element with value 'k'. We can:
             return l[0] == key
   
         ## If the middle element is smaller we will search in
-        ## a sublist that begins with that element and 
+        ## a sublist that begins with that element and
         ## goes towards the end
         if  l[len(l) // 2] <= key:
             return pythonic_bs(l[len(l)//2:],key)
@@ -174,7 +173,7 @@ Suppose a sorted array 'A' where we search for element with value 'k'. We can:
         return bs(l,x,mid,high)
  ```
   
-File is available [here](../../Code/Algorithms/Arrays/binary_search.py ).
+File is available [here](../../Code/Algorithms/Arrays/BinarySearch.py )).
   
 Size | Operations
 |-|-|
@@ -199,7 +198,7 @@ So we conclude that binary search <img src="https://latex.codecogs.com/gif.latex
             return l[0] == key
   
         ## If the middle element is smaller we will search in
-        ## a sublist that begins with that element and 
+        ## a sublist that begins with that element and
         ## goes towards the end
         if  l[len(l) // 2] <= key:
             return pythonic_bs(l[len(l)//2:],key)
@@ -268,5 +267,5 @@ Suppose a sorted list where we can look ahead <img src="https://latex.codecogs.c
   
 <img src="https://latex.codecogs.com/gif.latex?&#x5C;implies%20O(&#x5C;sqrt{n})+O(&#x5C;sqrt{n})%20=%20O(2*&#x5C;sqrt{n})%20=%20O(&#x5C;sqrt{n})"/>
   
-This is type of list is called a skiplist and will be given more attention in a later lecture.
+This is type of list is called a skip-list and will be given more attention in a later lecture.
   

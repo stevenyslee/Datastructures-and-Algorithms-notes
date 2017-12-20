@@ -139,12 +139,3 @@ class LinkedList:
 
     def __bool__(self):
         return bool(self.root)
-
-
-if __name__=="__main__":
-    list = LinkedList()
-    list.append(10)
-    list.append(20)
-    list.append(30)
-    print(list)
-    print(reversed(list))
