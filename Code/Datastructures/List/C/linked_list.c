@@ -26,18 +26,16 @@ int create_ll_node(ll_node *node, int _){
     return 0;
 }
 
-int destroy_linked_list(linked_list *list,int count, int destroy_elements){
-    void* start = list;
-    for(;count>0;count--){
-        while(list->head){
-            ll_node *_to_del = list->head;
-            list -> head = list -> head -> next;
-            if (destroy_elements) free(_to_del->element);
-            free(_to_del);
-        }
-        list++;
+int destroy_linked_list(linked_list *list, int destroy_elements){
+    
+    while(list->head){
+        ll_node *_to_del = list->head;
+        list -> head = list -> head -> next;
+        if (destroy_elements) 
+            free(_to_del->element);
+        free(_to_del);
     }
-    free(start);
+    free(list);
 
     return 0;
 }
@@ -56,13 +54,48 @@ int insert_linked_list( linked_list *list, void *element){
 
     return 0;
 }
-int remove_linked_list( const linked_list *list, void *element, int (comp)(const void*, const void*)){
+/**
+ * Create an indivitual node that is outside the list and points to a node in the list.
+ * This allows us to traverse the list, from the beginning to the end with less
+ * cases to check.
+ */
+void* remove_linked_list(linked_list *list, void *element, int (comp)(const void*, const void*)){
 
-    return 0;
+    struct holder{
+        ll_node* next;
+        ll_node* current;
+        void* element;
+    } curr = {list->head,NULL, NULL};
+
+    while(curr.next && !curr.element){
+        curr.element = comp(element,curr.next->element)? NULL: curr.next -> element;
+        curr.current = curr.element? curr.current: curr.next;
+        curr.next = curr.element? curr.next: curr.next -> next;
+    }
+    
+    // no next
+    // we found element.
+    // if we found element
+
+    
+    list -> count -= curr.element != NULL;
+
+    return curr.element;
 }
-int find_linked_list( const linked_list *list, void *element, int (comp)(const void*, const void*)){
 
-    return 0;
+/**
+ * Return pointer/null if found/not found
+ */
+void* find_linked_list( const linked_list *list, void *element, int (comp)(const void*, const void*)){
+
+    linked_list l = {list->head,0};
+    int flag = 1;
+    while (l.head && flag){
+        flag = comp(l.head,element);
+        l.head = flag? l.head -> next : l.head;
+    }
+
+    return flag? NULL : l.head;
 }
 
 

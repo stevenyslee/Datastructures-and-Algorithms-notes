@@ -21,10 +21,10 @@ typedef struct{
     int count;
 }linked_list;
 
-int create_linked_list( linked_list *list,int count);
-int insert_linked_list( linked_list *list, void *element);
-int remove_linked_list( const linked_list *list, void *element, int (comp)(const void*, const void*));
-int find_linked_list( const linked_list *list, void *element, int (comp)(const void*, const void*));
-int destroy_linked_list(linked_list *list,int count, int destroy_elements);
+int   create_linked_list( linked_list *list,int count);
+int   insert_linked_list( linked_list *list, void *element);
+void* remove_linked_list( linked_list *list, void *element, int (comp)(const void*, const void*));
+void* find_linked_list( const linked_list *list, void *element, int (comp)(const void*, const void*));
+int   destroy_linked_list(linked_list *list, int destroy_elements);
 
 #endif //DS_AL_LINKED_LIST_H

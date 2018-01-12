@@ -18,26 +18,27 @@ __Table of Contents__
 
 ___
 
-##Linked Lists
+## Linked Lists
     
 A linked list is a sequence of nodes. The simplest form of a linked list has two ( 2 ) fields:
   
-a. A `pointer` to the `next` node.
-b. A `pointer` to the `current` element in the list.
+a. A `pointer` to the `next` node.  
+b. A `pointer` to the `current` element in the list.  
 
 |Simple Linked-List|Array-List| Operation |
 |-----------|----------|:---------:|
-|$\Theta(1)$| $O(n)$*, $\Omega$(1)| `Insert`, `Append` first / last element|
+|$\Theta(1),O(n)$*| $O(n)$**| `Insert`, `Append` first / last element|
 |$O(n)$     | $O(1)$   | Random element access |
 |$O(n)$     | $O(n)$   | Search for element |
-|$O(n)$**     | $O(n)$   | Space|
+|$O(n)$***     | $O(n)$   | Space|
+
+___
+__Notes :__
+
+\* Having a pointer to both ends provides a trivial solution to $O(n)$ append speed.
+
+\*\* Insertion in the beginning and end of an arraylist depends on the implementation, it is possible for $O(1)$ `insert` and `append` but needs slightly more sophistication than the obvious array list implementations. For reference, Python's built-in list is an arrayList with $O(1)$ append and insert.
 
 
-\* Insertion on the ends depends on the implementation, it is possible for $O(1)$ `insert` and `append` but needs slightly more sophistication than the obvious array list implementations. For reference, Python's built-in list is an arrayList with $O(1)$ append and insert.
+\*\*\* Simple LinkedLists require double the space compared to arrays due to the 2 ( two ) pointer fields of each node. But is still $O(n)$ bound.
 
-
-\*\* Simple LinkedLists require double the space compared to arrays due to the 2 ( two ) pointer fields of each node.
-
-```
-
-```
